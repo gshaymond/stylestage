@@ -1,11 +1,11 @@
 :root {
-  --color-primary: #3a00ff;
-  --color-primary-alt: #6f6ffd;
-  --color-secondary: #d42257;
-  --color-background: #d2fbf7;
-  --color-text: #412d86;
+  --color-primary: #356738;
+  --color-primary-alt: #6c6c6c;
+  --color-secondary: rgb(255, 217, 0);
+  --color-background: #6f9164;
+  --color-text: gold;
   --color-light: #fff;
-  --color-anchor: #3a00ff;
+  --color-anchor: #3d0000;
   --font-family: "Baloo 2", sans-serif;
   --font-weight-strong: 500;
   --font-size-h1: 6rem;
@@ -25,6 +25,10 @@
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+path {
+  display: none;
 }
 
 /* Remove default margin */
@@ -51,6 +55,20 @@ body {
   overflow-x: hidden;
 }
 
+header {
+  background-color: var(--color-primary);
+  position: fixed;
+  max-height: 150px;
+  width: 100%;
+  top: 0;
+
+  /* transform-origin: 100px 0; */
+
+  /* animation: twinkle 2s infinite ease-in-out; */
+  /* animation: rotate 10s infinite ease-in-out; */
+  /* animation: minecart 10s infinite ease-in-out; */
+}
+
 /* Make images easier to work with */
 img {
   display: block;
@@ -72,5 +90,41 @@ select {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+
+/*----- Animations -----*/
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 10px 5px rgba(255, 215, 0, 0.5); 
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px 10px rgba(255, 215, 0, 0.8);
+  }
+}
+
+@keyframes rotate {
+  0%, 75% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(45deg);
+  }
+  55% {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes minecart {
+  0% {
+    transform: translateX(-100vw);
+  }
+  65%, 100%{
+    transform: translateX(100vw);
   }
 }
