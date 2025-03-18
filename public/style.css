@@ -1,11 +1,11 @@
 :root {
-  --color-primary: #356738;
-  --color-primary-alt: #6c6c6c;
-  --color-secondary: rgb(255, 217, 0);
-  --color-background: #6f9164;
-  --color-text: gold;
+  --color-primary: #3a00ff;
+  --color-primary-alt: #6f6ffd;
+  --color-secondary: #d42257;
+  --color-background: #d2fbf7;
+  --color-text: #412d86;
   --color-light: #fff;
-  --color-anchor: #3d0000;
+  --color-anchor: #3a00ff;
   --font-family: "Baloo 2", sans-serif;
   --font-weight-strong: 500;
   --font-size-h1: 6rem;
@@ -25,10 +25,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-path {
-  display: none;
 }
 
 /* Remove default margin */
@@ -53,22 +49,6 @@ body {
   line-height: 1.5;
   text-rendering: optimizeSpeed;
   overflow-x: hidden;
-  background-image: url('/stylestage-sass-main/stylestage/images/Erebor\ background.svg');
-  background-attachment: fixed;
-}
-
-header {
-  /* background-color: var(--color-primary); */
-  position: fixed;
-  max-height: 150px;
-  width: 100%;
-  top: 0;
-
-  /* transform-origin: 100px 0; */
-
-  /* animation: twinkle 2s infinite ease-in-out; */
-  /* animation: rotate 10s infinite ease-in-out; */
-  /* animation: minecart 10s infinite ease-in-out; */
 }
 
 /* Make images easier to work with */
@@ -94,14 +74,17 @@ select {
     scroll-behavior: auto !important;
   }
 }
-
+body {
+  background-image: url("/images/Erebor background.svg");
+  background-attachment: fixed;
+}
 
 /*----- Animations -----*/
 @keyframes twinkle {
   0%, 100% {
     opacity: 1;
     transform: scale(1);
-    box-shadow: 0 0 10px 5px rgba(255, 215, 0, 0.5); 
+    box-shadow: 0 0 10px 5px rgba(255, 215, 0, 0.5);
   }
   50% {
     opacity: 0.5;
@@ -109,7 +92,6 @@ select {
     box-shadow: 0 0 20px 10px rgba(255, 215, 0, 0.8);
   }
 }
-
 @keyframes rotate {
   0%, 75% {
     transform: rotate(0deg);
@@ -121,12 +103,11 @@ select {
     transform: rotate(45deg);
   }
 }
-
 @keyframes minecart {
   0% {
     transform: translateX(-100vw);
   }
-  65%, 100%{
+  65%, 100% {
     transform: translateX(100vw);
   }
 }
