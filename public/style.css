@@ -53,10 +53,12 @@ body {
   line-height: 1.5;
   text-rendering: optimizeSpeed;
   overflow-x: hidden;
+  background-image: url('/Erebor\ background.svg');
+  background-attachment: fixed;
 }
 
 header {
-  background-color: var(--color-primary);
+  /* background-color: var(--color-primary); */
   position: fixed;
   max-height: 150px;
   width: 100%;
