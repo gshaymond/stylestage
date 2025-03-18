@@ -53,8 +53,7 @@ body {
   line-height: 1.5;
   text-rendering: optimizeSpeed;
   overflow-x: hidden;
-  background-image: url('/Erebor\ background.svg');
-  background-attachment: fixed;
+  background-image: url('/stylestage-sass-main/stylestage/images/Erebor\ background.svg');
 }
 
 header {
