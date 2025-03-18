@@ -1,0 +1,124 @@
+$color-nav-primary: #52b788 !default;
+$color-header-background: #d9d9d9 !default;
+$color-header-primary-alt: #284b63 !default;
+
+/* Button links */
+.link-github,
+.page-footer li a,
+#files a {
+  color: #000;
+  display: inline-block;
+  background: rgba(255, 255, 255, .6);
+  padding: 0 7px;
+  font-family: var(--header-font);
+  font-weight: var(--header-font-bold);
+  font-style: normal;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  border: 0;
+  min-height: 32px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  vertical-align: bottom;
+  border-radius: 2px;
+  margin-bottom: var(--tiny-margin);
+  border-radius: 3px;
+    box-shadow: 0px 0px 12px -2px;
+    text-transform: uppercase;
+    position: relative;
+    transition: background-color 0.6s ease, transform 0.3s ease; 
+    overflow: hidden;
+}
+
+.link-github:hover,
+.page-footer li a:hover,
+#files a:hover {
+  color: #fff;
+  border: 0;
+  background-color: rgba(0, 0, 0, .8);
+  -webkit-animation: buttons 1s linear forwards infinite;
+          animation: buttons 1s linear forwards infinite;
+}
+
+
+// star on github
+.link-github svg{
+    background: $color-header-primary-alt;
+    color: $color-header-background;
+    height: 16px;
+    width: 16px;
+    padding: 10px;
+
+}
+
+.link-github:hover svg {
+fill: #fff;
+border-color: #fff;
+-webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+}
+
+
+// main nav
+nav {
+    margin-top: 0;
+}
+
+nav ul {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: clamp(0.25rem, 0.5vw, 0.5rem);
+    padding: 0.56rem;
+    margin: 1rem 0 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    background: $color-header-primary-alt;
+    color: $color-header-background;
+    height: max-content;
+    width: max-content;
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 12px -2px;
+    text-transform: uppercase;
+    position: relative;
+    transition: background-color 0.6s ease, transform 0.3s ease; 
+    overflow: hidden;
+
+    /* Pseudo-element ::after for animation */
+    &::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        background: rgba(255, 255, 255, 0.1); /* Slight white background for effect */
+        border-radius: 100%;
+        transition: width 0.3s ease, height 0.3s ease;
+    }
+
+    /* Hover and focus effect */
+    &:focus,
+    &:hover {
+        background-color: darken($color-header-primary-alt, 7%);
+        transform: translateY(-5px);
+    }
+
+    /* Active state - on click */
+    &:active {
+        transform: translateY(5px);
+        
+        /* Adjust ::after on active state */
+        &::after {
+            width: 300px;
+            height: 300px;
+        }
+    }
+}
+

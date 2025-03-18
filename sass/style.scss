@@ -4,6 +4,12 @@
 // $color-primary: #3a0;
 @import "theme";
 @import "reset";
+@import "_header";
+@import "_nav";
+// @import "_mainbackground";
+@import "_font";
+@import "_layout";
+
 
 body{
     background-image: url('/images/Erebor\ background.svg');

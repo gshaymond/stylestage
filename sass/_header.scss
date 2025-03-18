@@ -1,0 +1,47 @@
+// Define color variables
+$color-header-primary: #52b788 !default;
+$color-header-primary-alt: #284b63 !default; 
+$color-header-secondary: #353535 !default;
+$color-header-background: #d9d9d9 !default;
+
+// SCSS animations
+@keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+header {
+display: flex;
+flex-direction: row;
+position: relative;
+animation: fadeInUp 1s ease-in-out;
+
+h1 {
+    font-size: 3rem;
+    animation: fadeInUp 1s ease-in-out forwards;
+    animation-delay: 0.3s; 
+}
+
+h2 {
+    font-size: 2rem;
+    animation: fadeInUp 1s ease-in-out forwards;
+    animation-delay: 0.6s; 
+}
+
+p {
+    font-size: 1rem;
+    animation: fadeInUp 1s ease-in-out forwards;
+    animation-delay: 0.9s; // Delay for staggered effect
+}
+
+}
+
+
+
+
