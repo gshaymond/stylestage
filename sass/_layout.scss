@@ -58,9 +58,9 @@ body{
 #main section.container,
 #styles,
 #files {
-  background-color: rgba(214, 239, 224, 0.968);
+  background-color: rgba(0, 60, 24, 0.748);
   border-radius: 2px;
-  border: 12px solid seagreen;
+  border: 12px solid rgba(255, 191, 0, 0.736);
 }
 
 #main section.container p {
@@ -77,7 +77,7 @@ body{
 /* Header sections */
 #main h2,
 #styles h2 {
-  background: radial-gradient( seagreen, white);
+  background-color: rgba(0, 60, 24, 0);
   display: --webkit-box;
   display: --ms-flexbox;
   display: flex;
@@ -102,6 +102,15 @@ body{
 //   margin-left: auto;
 //   border-radius: 2px;
 // }
+
+.container {
+  background-color: rgba(0, 59, 0, 0);
+}
+
+.container h2 {
+  margin-top: 2%;
+}
+
 
 
 /* Smaller title */

@@ -6,47 +6,7 @@
 @import "reset";
 @import "_header";
 @import "_nav";
-// @import "_mainbackground";
+@import "_mainbackground";
 @import "_font";
 @import "_layout";
-
-
-body{
-    background-image: url('/images/Erebor\ background.svg');
-    background-attachment: fixed;
-}
-
-/*----- Animations -----*/
-@keyframes twinkle {
-    0%, 100% {
-      opacity: 1;
-      transform: scale(1);
-      box-shadow: 0 0 10px 5px rgba(255, 215, 0, 0.5); 
-    }
-    50% {
-      opacity: 0.5;
-      transform: scale(1.1);
-      box-shadow: 0 0 20px 10px rgba(255, 215, 0, 0.8);
-    }
-  }
-  
-  @keyframes rotate {
-    0%, 75% {
-      transform: rotate(0deg);
-    }
-    25% {
-      transform: rotate(45deg);
-    }
-    55% {
-      transform: rotate(45deg);
-    }
-  }
-  
-  @keyframes minecart {
-    0% {
-      transform: translateX(-100vw);
-    }
-    65%, 100%{
-      transform: translateX(100vw);
-    }
-  }
+@import "animations";

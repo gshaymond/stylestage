@@ -90,12 +90,15 @@ header {
   display: flex;
   flex-direction: row;
   position: relative;
-  animation: fadeInUp 1s ease-in-out;
+  background-color: #00290cae;
+  justify-self: center;
+  border: 12px solid rgba(255, 191, 0, 0.736);
 }
 header h1 {
   font-size: 3rem;
   animation: fadeInUp 1s ease-in-out forwards;
   animation-delay: 0.3s;
+  color: #ffc402;
 }
 header h2 {
   font-size: 2rem;
@@ -162,7 +165,10 @@ header p {
 }
 
 nav {
-  margin-top: 0;
+  margin-top: 7px;
+  background-color: #00290cae;
+  border-radius: 20px;
+  justify-self: center;
 }
 
 nav ul {
@@ -172,19 +178,18 @@ nav ul {
   justify-content: space-evenly;
   gap: clamp(0.25rem, 0.5vw, 0.5rem);
   padding: 0.56rem;
-  margin: 1rem 0 0;
   list-style: none;
 }
 
 nav li {
   display: inline-block;
-  background: #284b63;
+  background: #003f12d3;
   color: #d9d9d9;
   height: max-content;
   width: max-content;
   padding: 10px;
   border-radius: 3px;
-  box-shadow: 0px 0px 12px -2px;
+  box-shadow: 0px 0px 12px -2px black;
   text-transform: uppercase;
   position: relative;
   transition: background-color 0.6s ease, transform 0.3s ease;
@@ -207,7 +212,7 @@ nav li::after {
   transition: width 0.3s ease, height 0.3s ease;
 }
 nav li:focus, nav li:hover {
-  background-color: #1e384a;
+  background-color: rgba(0, 27, 8, 0.8039215686);
   transform: translateY(-5px);
 }
 nav li:active {
@@ -217,6 +222,11 @@ nav li:active {
 nav li:active::after {
   width: 300px;
   height: 300px;
+}
+
+body {
+  background-image: url("/images/Erebor background.svg");
+  background-attachment: fixed;
 }
 
 :root {
@@ -260,6 +270,7 @@ h1, h2, h3, h4 {
   margin-top: var(--s1);
   margin-bottom: 0;
   color: beige;
+  text-shadow: 4px 3px 1px black;
 }
 
 h1 {
@@ -358,9 +369,9 @@ body {
 #main section.container,
 #styles,
 #files {
-  background-color: rgba(214, 239, 224, 0.968);
+  background-color: rgba(0, 60, 24, 0.748);
   border-radius: 2px;
-  border: 12px solid seagreen;
+  border: 12px solid rgba(255, 191, 0, 0.736);
 }
 
 #main section.container p {
@@ -377,7 +388,7 @@ body {
 /* Header sections */
 #main h2,
 #styles h2 {
-  background: radial-gradient(seagreen, white);
+  background-color: rgba(0, 60, 24, 0);
   display: --webkit-box;
   display: --ms-flexbox;
   display: flex;
@@ -393,6 +404,14 @@ body {
 }
 
 /* Centered sections */
+.container {
+  background-color: rgba(0, 59, 0, 0);
+}
+
+.container h2 {
+  margin-top: 2%;
+}
+
 /* Smaller title */
 h3 {
   font-size: 2rem;
@@ -409,9 +428,31 @@ h3 {
   margin: 0 0 var(--normal-margin);
 }
 
-body {
-  background-image: url("/images/Erebor background.svg");
-  background-attachment: fixed;
+/*---- Shapes ----*/
+nav::before {
+  content: "";
+  position: fixed;
+  border-top: 50px solid #ff0000;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  height: 0;
+  width: 125px;
+  top: 28%;
+  z-index: -1;
+  animation: infinite 7s minecart;
+}
+
+nav::after {
+  content: "";
+  position: fixed;
+  background-color: #ff0000;
+  height: 85px;
+  width: 75px;
+  bottom: 23%;
+  left: 7%;
+  border-radius: 0 0 17px 17px;
+  z-index: -2;
+  animation: infinite 5s rotate;
 }
 
 /*----- Animations -----*/
@@ -419,12 +460,12 @@ body {
   0%, 100% {
     opacity: 1;
     transform: scale(1);
-    box-shadow: 0 0 10px 5px rgba(255, 215, 0, 0.5);
+    background-color: #f5c400;
   }
   50% {
-    opacity: 0.5;
-    transform: scale(1.1);
-    box-shadow: 0 0 20px 10px rgba(255, 215, 0, 0.8);
+    opacity: 1;
+    transform: scale(1.5);
+    background-color: #ffdf27;
   }
 }
 @keyframes rotate {
@@ -440,9 +481,9 @@ body {
 }
 @keyframes minecart {
   0% {
-    transform: translateX(-100vw);
+    transform: translateX(-40vw);
   }
-  65%, 100% {
-    transform: translateX(100vw);
+  80%, 100% {
+    transform: translateX(75vw);
   }
 }

@@ -1,11 +1,5 @@
-$color-main-primary: #2a2e34 !default;
-$color-main-primary-alt: #02cecb !default;
-$color-main-secondary: #6e4c0d !default;
-$color-main-background: #848383 !default;
-
-
 body{
-    background: linear-gradient(to bottom, orange 0%, rgb(244, 179, 59) 3%, rgb(244, 207, 139) 7%,  $color-header-background 10%, $color-main-primary 35%, #091a32);
+    background-image: url('/images/Erebor\ background.svg');
+    background-attachment: fixed;
 }
-
 

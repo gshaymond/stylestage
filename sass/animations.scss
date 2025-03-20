@@ -1,0 +1,63 @@
+/*---- Shapes ----*/
+nav::before {
+    content: "";
+    position: fixed;
+    border-top: 50px solid #ff0000;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    height: 0;
+    width: 125px;
+    top: 28%;
+    z-index: -1;
+    animation: infinite 7s minecart ;
+}
+nav::after {
+    content: "";
+    position: fixed;
+    background-color: #ff0000;
+    height: 85px;
+    width: 75px;
+    bottom: 23%;
+    left: 7%;
+    border-radius: 0 0 17px 17px;
+    z-index: -2;
+    animation: infinite 5s rotate;
+}
+
+
+
+
+/*----- Animations -----*/
+@keyframes twinkle {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+      background-color:  rgb(245, 196, 0); 
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.5);
+      background-color:  rgb(255, 223, 39);
+    }
+  }
+  
+  @keyframes rotate {
+    0%, 75% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(45deg);
+    }
+    55% {
+      transform: rotate(45deg);
+    }
+  }
+  
+  @keyframes minecart {
+    0% {
+      transform: translateX(-40vw);
+    }
+    80%, 100%{
+      transform: translateX(75vw);
+    }
+  }
