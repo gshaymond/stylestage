@@ -1,9 +1,3 @@
-// Define color variables
-$color-header-primary: #52b788 !default;
-$color-header-primary-alt: #284b63 !default; 
-$color-header-secondary: #353535 !default;
-$color-header-background: #d9d9d9 !default;
-
 // SCSS animations
 @keyframes fadeInUp {
     0% {
@@ -17,18 +11,10 @@ $color-header-background: #d9d9d9 !default;
   }
 
 header {
-display: flex;
-flex-direction: row;
-position: relative;
-background-color: #00290cae;
-justify-self: center;
-border: 12px solid rgba(255, 191, 0, 0.736);
-
 h1 {
     font-size: 3rem;
     animation: fadeInUp 1s ease-in-out forwards;
     animation-delay: 0.3s; 
-    color: rgb(255, 196, 2);
 }
 
 h2 {

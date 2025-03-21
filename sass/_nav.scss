@@ -1,33 +1,35 @@
 $color-nav-primary: #004425a8 !default;
 $color-header-background: #d9d9d9 !default;
 $color-header-primary-alt: #003f12bf !default;
+$color-button-text:black;
+$color-button-background:rgba(255, 255, 255, .6);
 
 /* Button links */
 .link-github,
 .page-footer li a,
 #files a {
-  color: #000;
-  display: inline-block;
-  background: rgba(255, 255, 255, .6);
-  padding: 0 7px;
-  font-family: var(--header-font);
-  font-weight: var(--header-font-bold);
-  font-style: normal;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  border: 0;
-  min-height: 32px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  vertical-align: bottom;
-  border-radius: 2px;
-  margin-bottom: var(--tiny-margin);
-  border-radius: 3px;
-    box-shadow: 0px 0px 12px -2px;
+  
+    display: inline-block;
+    background: $color-button-background;
+    padding: 0 7px;
+
+    font-weight: 400;
+    font-size: 1.5rem;
     text-transform: uppercase;
+    color: $color-button-text;
+
+    border: 0;
+    margin-bottom: var(--tiny-margin);
+    border-radius: 2px;
+    box-shadow: 0px 0px 12px -2px;
+    
     position: relative;
     transition: background-color 0.6s ease, transform 0.3s ease; 
     overflow: hidden;
+
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    vertical-align: bottom;
 }
 
 .link-github:hover,
@@ -35,7 +37,7 @@ $color-header-primary-alt: #003f12bf !default;
 #files a:hover {
   color: #fff;
   border: 0;
-  background-color: rgba(0, 0, 0, .8);
+  background-color: $color-button-text;
   -webkit-animation: buttons 1s linear forwards infinite;
           animation: buttons 1s linear forwards infinite;
 }

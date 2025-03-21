@@ -22,6 +22,11 @@
     --s3: calc(var(--s2) * var(--ratio));
     --s4: calc(var(--s3) * var(--ratio));
     --s5: calc(var(--s4) * var(--ratio));
+
+    // font color
+    --textColor: rgb(186, 185, 185);
+    --headingColor: rgb(203, 203, 22);
+    --linkColor: white; 
   }
   * {
     font-weight: var(--wght);
@@ -37,14 +42,13 @@
     font-family: "Jim Nightshade", cursive;
     letter-spacing: .08em;
     word-spacing: 0.1em;
-    margin-top: var(--s1);
-    margin-bottom: 0;
-    color: beige;
+    color: var(--headingColor);
     text-shadow: 4px 3px 1px black;
   }
   h1{
     font-size:var(--s5);
     font-weight: 700;
+    color: rgb(255, 196, 2);
   }
   h2{
     font-size:var(--s4);
@@ -60,7 +64,7 @@
   }
   nav a{
     text-decoration: none;
-    color:#d9d9d9;
+    color:var(--linkColor);
     --wght:500;
   }
   
@@ -68,10 +72,12 @@
     text-decoration: none;
   }
   a, strong{
-    color:#d9d9d9;
-    --wght:300;
-    font-style: oblique -20deg; 
-    // not work oblique?
+    color:var(--linkColor);
+    font-size: var(--s0);
+    --wght:350;
+  }
+  body{
+    color:var(--textColor);
   }
  
 // skip-link
@@ -90,5 +96,5 @@
   left: 0;
   width: auto;
   height: auto;
-  padding: 0.3rem;
+  padding: var(--s-1);
 }

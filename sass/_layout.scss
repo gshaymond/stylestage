@@ -2,10 +2,17 @@
     --content-width: 90%;
     ----border-radius:20%;
 
+    // margin, padding
     --big-margin: 3rem;
     --normal-margin: 1rem;
     --small-margin: .6rem;
     --tiny-margin: .3rem;
+
+    // theme color
+    --primary-color:rgba(0, 60, 24, 0.748);
+    --secondary-color:rgba(255, 191, 0, 0.736);
+    --container-background:rgba(0, 59, 0, 0);
+
   }
 
 h1,
@@ -16,6 +23,15 @@ p {
 margin: 0;
 }
 
+header{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  background-color: var(--primary-color);
+  justify-self: center;
+  border: 12px solid var(--secondary-color);
+}
+
 body{
     position: relative;
     display: block;
@@ -24,43 +40,27 @@ body{
     overflow-y: scroll;
     padding: var(--small-margin);
     
-    color:white;
     background-attachment: scroll;
     background-clip: border-box;
-    // background-color: beige;
-    // opacity: 0.5;
-    // border: rgb(98, 246, 165) solid 12px;
 
     scroll-behavior: smooth;
     scrollbar-color: grey rgb(214, 222, 215);
     scrollbar-width: thin;
 }
 
-.container, #files .container{
+.container, #files, #styles{
     width: var(--content-width);
     max-width: 1200px; 
-    margin: var(--small-margin) auto;
-    
+    margin: var(--small-margin) auto;  
 }
 
-// .container::before {
-//     content: "";
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     opacity: 0.8;
-//     z-index: -1;
-//   }
-
-/* Darker page sections */
+/* page sections */
 #main section.container,
-#styles,
+#styles .container,
 #files {
-  background-color: rgba(0, 60, 24, 0.748);
+  background-color: var(--primary-color);
   border-radius: 2px;
-  border: 12px solid rgba(255, 191, 0, 0.736);
+  border: 12px solid var(--secondary-color);
 }
 
 #main section.container p {
@@ -69,64 +69,37 @@ body{
 
 #about,
 #guidelines,
-#contribute,
-#styles {
+#contribute {
   margin-bottom: var(--big-margin);
 }
 
 /* Header sections */
 #main h2,
 #styles h2 {
-  background-color: rgba(0, 60, 24, 0);
-  display: --webkit-box;
-  display: --ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  text-align: center;
   line-height: 2.5rem;
   gap: .5rem;
   padding: var(--tiny-margin) 0;
 }
 
-/* Centered sections */
-// #guidelines,
-// #contribute,
-// #styles,
-// #files  {
-//   max-width: 750px;
-//   margin-right: auto;
-//   margin-left: auto;
-//   border-radius: 2px;
-// }
 
 .container {
-  background-color: rgba(0, 59, 0, 0);
+  background-color:var(--container-background);
 }
 
 .container h2 {
-  margin-top: 2%;
+  margin-top: var(--normal-margin);
 }
 
-
-
-/* Smaller title */
 h3 {
-  font-size: 2rem;
   margin-left: var(--big-margin);
 }
 
 /* Source files */
-#files .container {
-    text-align: center;
-    padding-bottom: var(--normal-margin);
 
-  }
-  
-  #files h3 {
-    margin: 0 0 var(--normal-margin);
-  }
+#files .container {
+  text-align: center;
+}
+
+
   
