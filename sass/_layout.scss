@@ -12,15 +12,16 @@
     --primary-color:rgba(0, 60, 24, 0.748);
     --secondary-color:rgba(255, 191, 0, 0.736);
     --container-background:rgba(0, 59, 0, 0);
+    --third-color:#00290cae;
 
   }
-
 
 h1,
 h2,
 h3,
 h4,
-p {
+p, 
+li{
 margin: 0 auto;
 max-width: 70ch;
 }
@@ -41,7 +42,7 @@ body{
     max-height: 500px;
     overflow-y: scroll;
     padding: var(--small-margin);
-    
+
     background-attachment: scroll;
     background-clip: border-box;
 
@@ -75,7 +76,6 @@ body{
   margin-bottom: var(--big-margin);
 }
 
-/* Header sections */
 #main h2,
 #styles h2 {
   text-align: center;
@@ -89,19 +89,41 @@ body{
   background-color:var(--container-background);
 }
 
-.container h2 {
-  margin-top: var(--normal-margin);
-}
-
 h3 {
   margin-left: var(--big-margin);
-}
-
-/* Source files */
-
-#files .container {
   text-align: center;
 }
 
-
+/* Source files */
+#files .container{
+  text-align: center;
+}
+.link-guidelines,
+.link-allstyles,
+.profile .container{
+  display: block;
+  text-align: center; 
+  margin: 20px auto;
+  width: fit-content;
+}
   
+// profile
+.profile .container{
+  width: 62%;
+  margin: var(--small-margin) auto;  
+  background-color: var(--third-color);
+  border-radius: 10px;
+}
+
+// page-footer
+.page-footer .container{
+  width: 62%;
+  margin: var(--normal-margin) auto;  
+  background-color: var(--third-color);
+  border-radius: 10px;
+}
+
+.page-footer p{
+  width: 95%;
+  padding-bottom: var(--small-margin);
+}

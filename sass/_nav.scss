@@ -1,13 +1,13 @@
-$color-nav-primary: #004425a8 !default;
-$color-header-background: #d9d9d9 !default;
-$color-header-primary-alt: #003f12bf !default;
 $color-button-text:black;
 $color-button-background:rgba(255, 255, 255, .6);
 
 /* Button links */
 .link-github,
 .page-footer li a,
-#files a {
+#files a, 
+.link-guidelines,
+.link-allstyles,
+.profile .container>a {
   
     display: inline-block;
     background: $color-button-background;
@@ -30,11 +30,14 @@ $color-button-background:rgba(255, 255, 255, .6);
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     vertical-align: bottom;
+
 }
 
 .link-github:hover,
 .page-footer li a:hover,
-#files a:hover {
+#files a:hover,
+.link-guidelines:hover,
+.profile .container>a:hover{
   color: #fff;
   border: 0;
   background-color: $color-button-text;
@@ -45,8 +48,7 @@ $color-button-background:rgba(255, 255, 255, .6);
 
 // star on github
 .link-github svg{
-    background: $color-header-primary-alt;
-    color: $color-header-background;
+    background-color: var(--primary-color);
     height: 16px;
     width: 16px;
     padding: 10px;
@@ -54,10 +56,8 @@ $color-button-background:rgba(255, 255, 255, .6);
 }
 
 .link-github:hover svg {
-fill: #fff;
-border-color: #fff;
--webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
+    border-color: #fff;
+    background-color: #fff;
 }
 
 
@@ -70,26 +70,26 @@ nav {
 }
 
 nav ul {
-    margin: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: clamp(0.25rem, 0.5vw, 0.5rem);
-    padding: 0.56rem;
+    padding: 0.9rem;
     
     list-style: none;
 }
 
 nav li {
     display: inline-block;
-    background: #003f12d3;
-    color: $color-header-background;
+
+    background: var(--primary-color);
     height: max-content;
     width: max-content;
     padding: 10px;
     border-radius: 3px;
     box-shadow: 0px 0px 12px -2px black;
     text-transform: uppercase;
+
     position: relative;
     transition: background-color 0.6s ease, transform 0.3s ease; 
     overflow: hidden;
@@ -102,9 +102,7 @@ nav li {
         height: 0;
         top: 50%;
         left: 50%;
-        transform: translate3d(-50%, -50%, 0);
-        background: rgba(255, 255, 255, 0.1); /* Slight white background for effect */
-        border-radius: 100%;
+        transform: translate(-50%, -50%);
         transition: width 0.3s ease, height 0.3s ease;
     }
 
@@ -127,3 +125,8 @@ nav li {
     }
 }
 
+// page-footer 
+.page-footer ul,
+.profile ul{
+    list-style: none; 
+}
