@@ -336,7 +336,8 @@ h2,
 h3,
 h4,
 p {
-  margin: 0;
+  margin: 0 auto;
+  max-width: 70ch;
 }
 
 header {
@@ -378,7 +379,7 @@ body {
 }
 
 #main section.container p {
-  margin: var(--normal-margin) var(--small-margin);
+  margin: var(--normal-margin) auto;
 }
 
 #about,
