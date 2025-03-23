@@ -114,7 +114,8 @@ header p {
 .page-footer li a:hover,
 #files a:hover,
 .link-guidelines:hover,
-.profile .container > a:hover {
+.profile .container > a:hover,
+.link-allstyles:hover {
   color: #fff;
   border: 0;
   background-color: black;
