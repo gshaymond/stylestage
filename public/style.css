@@ -1,28 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..800,0..1,0..1,0..1&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Jim+Nightshade&family=Lora:ital,wght@0,400..700;1,400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Recursive:wght@300..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Satisfy&display=swap");
-:root {
-  --color-primary: #3a00ff;
-  --color-primary-alt: #6f6ffd;
-  --color-secondary: #d42257;
-  --color-background: #d2fbf7;
-  --color-text: #412d86;
-  --color-light: #fff;
-  --color-anchor: #3a00ff;
-  --font-family: "Baloo 2", sans-serif;
-  --font-weight-strong: 500;
-  --font-size-h1: 6rem;
-  --font-size-h2: 3rem;
-  --font-size-h3: 2rem;
-  --font-size-h4: 1.35rem;
-  --font-size-text: 1.15rem;
-  --border-radius: 8px;
-}
-
 /*
  * [Modified] Modern CSS Reset
  * @link https://github.com/hankchizljaw/modern-css-reset
 */
 /* Box sizing rules */
+@import url("https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..800,0..1,0..1,0..1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Jim+Nightshade&family=Lora:ital,wght@0,400..700;1,400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Recursive:wght@300..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Satisfy&display=swap");
 *,
 *::before,
 *::after {
@@ -86,19 +68,10 @@ select {
     transform: translateY(0);
   }
 }
-header {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  background-color: #00290cae;
-  justify-self: center;
-  border: 12px solid rgba(255, 191, 0, 0.736);
-}
 header h1 {
   font-size: 3rem;
   animation: fadeInUp 1s ease-in-out forwards;
   animation-delay: 0.3s;
-  color: #ffc402;
 }
 header h2 {
   font-size: 2rem;
@@ -114,54 +87,52 @@ header p {
 /* Button links */
 .link-github,
 .page-footer li a,
-#files a {
-  color: #000;
+#files a,
+.link-guidelines,
+.link-allstyles,
+.profile .container > a {
   display: inline-block;
   background: rgba(255, 255, 255, 0.6);
   padding: 0 7px;
-  font-family: var(--header-font);
-  font-weight: var(--header-font-bold);
-  font-style: normal;
+  font-weight: 400;
   font-size: 1.5rem;
   text-transform: uppercase;
+  color: black;
   border: 0;
-  min-height: 32px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: bottom;
-  border-radius: 2px;
   margin-bottom: var(--tiny-margin);
-  border-radius: 3px;
+  border-radius: 2px;
   box-shadow: 0px 0px 12px -2px;
-  text-transform: uppercase;
   position: relative;
   transition: background-color 0.6s ease, transform 0.3s ease;
   overflow: hidden;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: bottom;
 }
 
 .link-github:hover,
 .page-footer li a:hover,
-#files a:hover {
+#files a:hover,
+.link-guidelines:hover,
+.profile .container > a:hover,
+.link-allstyles:hover {
   color: #fff;
   border: 0;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: black;
   -webkit-animation: buttons 1s linear forwards infinite;
   animation: buttons 1s linear forwards infinite;
 }
 
 .link-github svg {
-  background: #284b63;
-  color: #d9d9d9;
+  background-color: var(--primary-color);
   height: 16px;
   width: 16px;
   padding: 10px;
 }
 
 .link-github:hover svg {
-  fill: #fff;
   border-color: #fff;
-  -webkit-transform: rotate(360deg);
-  transform: rotate(360deg);
+  background-color: #fff;
 }
 
 nav {
@@ -172,19 +143,17 @@ nav {
 }
 
 nav ul {
-  margin: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   gap: clamp(0.25rem, 0.5vw, 0.5rem);
-  padding: 0.56rem;
+  padding: 0.9rem;
   list-style: none;
 }
 
 nav li {
   display: inline-block;
-  background: #003f12d3;
-  color: #d9d9d9;
+  background: var(--primary-color);
   height: max-content;
   width: max-content;
   padding: 10px;
@@ -205,10 +174,7 @@ nav li::after {
   height: 0;
   top: 50%;
   left: 50%;
-  transform: translate3d(-50%, -50%, 0);
-  background: rgba(255, 255, 255, 0.1);
-  /* Slight white background for effect */
-  border-radius: 100%;
+  transform: translate(-50%, -50%);
   transition: width 0.3s ease, height 0.3s ease;
 }
 nav li:focus, nav li:hover {
@@ -222,6 +188,11 @@ nav li:active {
 nav li:active::after {
   width: 300px;
   height: 300px;
+}
+
+.page-footer ul,
+.profile ul {
+  list-style: none;
 }
 
 body {
@@ -248,6 +219,9 @@ body {
   --s3: calc(var(--s2) * var(--ratio));
   --s4: calc(var(--s3) * var(--ratio));
   --s5: calc(var(--s4) * var(--ratio));
+  --textColor: rgb(186, 185, 185);
+  --headingColor: rgb(203, 203, 22);
+  --linkColor: white;
 }
 
 * {
@@ -267,15 +241,14 @@ h1, h2, h3, h4 {
   font-family: "Jim Nightshade", cursive;
   letter-spacing: 0.08em;
   word-spacing: 0.1em;
-  margin-top: var(--s1);
-  margin-bottom: 0;
-  color: beige;
+  color: var(--headingColor);
   text-shadow: 4px 3px 1px black;
 }
 
 h1 {
   font-size: var(--s5);
   font-weight: 700;
+  color: #ffc402;
 }
 
 h2 {
@@ -295,18 +268,23 @@ h4 {
 
 nav a {
   text-decoration: none;
-  color: #d9d9d9;
+  color: var(--linkColor);
   --wght:500;
 }
 
 a {
   text-decoration: none;
+  text-align: center;
 }
 
 a, strong {
-  color: #d9d9d9;
-  --wght:300;
-  font-style: oblique -20deg;
+  color: var(--linkColor);
+  font-size: var(--s0);
+  --wght:350;
+}
+
+body {
+  color: var(--textColor);
 }
 
 .skip-link {
@@ -324,7 +302,7 @@ a, strong {
   left: 0;
   width: auto;
   height: auto;
-  padding: 0.3rem;
+  padding: var(--s-1);
 }
 
 :root {
@@ -334,14 +312,29 @@ a, strong {
   --normal-margin: 1rem;
   --small-margin: .6rem;
   --tiny-margin: .3rem;
+  --primary-color:rgba(0, 60, 24, 0.748);
+  --secondary-color:rgba(255, 191, 0, 0.736);
+  --container-background:rgba(0, 59, 0, 0);
+  --third-color:#00290cae;
 }
 
 h1,
 h2,
 h3,
 h4,
-p {
-  margin: 0;
+p,
+li {
+  margin: 0 auto;
+  max-width: 70ch;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  background-color: var(--primary-color);
+  justify-self: center;
+  border: 12px solid var(--secondary-color);
 }
 
 body {
@@ -351,7 +344,6 @@ body {
   max-height: 500px;
   overflow-y: scroll;
   padding: var(--small-margin);
-  color: white;
   background-attachment: scroll;
   background-clip: border-box;
   scroll-behavior: smooth;
@@ -359,73 +351,79 @@ body {
   scrollbar-width: thin;
 }
 
-.container, #files .container {
+.container, #files, #styles {
   width: var(--content-width);
   max-width: 1200px;
   margin: var(--small-margin) auto;
 }
 
-/* Darker page sections */
+/* page sections */
 #main section.container,
-#styles,
+#styles .container,
 #files {
-  background-color: rgba(0, 60, 24, 0.748);
+  background-color: var(--primary-color);
   border-radius: 2px;
-  border: 12px solid rgba(255, 191, 0, 0.736);
+  border: 12px solid var(--secondary-color);
 }
 
 #main section.container p {
-  margin: var(--normal-margin) var(--small-margin);
+  margin: var(--normal-margin) auto;
 }
 
 #about,
 #guidelines,
-#contribute,
-#styles {
+#contribute {
   margin-bottom: var(--big-margin);
 }
 
-/* Header sections */
 #main h2,
 #styles h2 {
-  background-color: rgba(0, 60, 24, 0);
-  display: --webkit-box;
-  display: --ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  text-align: center;
   line-height: 2.5rem;
   gap: 0.5rem;
   padding: var(--tiny-margin) 0;
 }
 
-/* Centered sections */
 .container {
-  background-color: rgba(0, 59, 0, 0);
+  background-color: var(--container-background);
 }
 
-.container h2 {
-  margin-top: 2%;
-}
-
-/* Smaller title */
 h3 {
-  font-size: 2rem;
   margin-left: var(--big-margin);
+  text-align: center;
 }
 
 /* Source files */
 #files .container {
   text-align: center;
-  padding-bottom: var(--normal-margin);
 }
 
-#files h3 {
-  margin: 0 0 var(--normal-margin);
+.link-guidelines,
+.link-allstyles,
+.profile .container {
+  display: block;
+  text-align: center;
+  margin: 20px auto;
+  width: fit-content;
+}
+
+.profile .container {
+  width: 62%;
+  margin: var(--small-margin) auto;
+  background-color: var(--third-color);
+  border-radius: 10px;
+}
+
+.page-footer .container {
+  width: 62%;
+  margin: var(--normal-margin) auto;
+  background-color: var(--third-color);
+  border-radius: 10px;
+}
+
+.page-footer p {
+  width: 95%;
+  padding-bottom: var(--small-margin);
 }
 
 /*---- Shapes ----*/
