@@ -225,7 +225,7 @@ nav li:active::after {
 }
 
 body {
-  background-image: url("/images/Erebor background.svg");
+  background-image: url("/images/EreborBackground.svg");
   background-attachment: fixed;
 }
 
