@@ -23,6 +23,7 @@ nav::after {
     z-index: -2;
     animation: infinite 5s rotate;
 }
+<<<<<<< HEAD
 section::before {
 
 }
@@ -94,8 +95,70 @@ section::before {
       bottom: 22.5%;
       left: 19%;
   }
+=======
+// start-shape
+header::before {
+  content: "★";  
+  position: fixed;
+  font-size: 10px;  
+  color: white;  
+  top: 80px;
+  left: 50px;
+  animation: twinkle 10s infinite;
+  z-index: 2;
 }
 
+header::after {
+  content: "★";  
+  position: fixed;
+  font-size: 10px;  
+  color: white;  
+  top: 180px;
+  left: 100px;
+  animation: twinkle 10s infinite;
+  z-index: 2;
+>>>>>>> cf14773c4e6494a3fb43705a122c22760de5b6fd
+}
+
+header .container::before {
+  content: "★";  
+  font-size: 10px;  
+  color: white;  
+  position: fixed;
+  top: 140px;
+  left: 180px;
+  animation: twinkle 10s infinite;
+  z-index: 2;
+}
+header .container::after {
+  content: "★";  
+  font-size: 10px;  
+  color: white;  
+  position: fixed;
+  top: 200px;
+  right: 100px;
+  animation: twinkle 10s infinite;
+  z-index: 2;
+}
+
+header .container span::before {
+  content: "★";  
+  font-size: 10px;  
+  color: white;  
+  position: fixed;
+  top: 140px;
+  left: 1270px;
+  animation: twinkle 10s infinite;
+}
+header .container span::after {
+  content: "★";  
+  font-size: 10px;  
+  color: white;  
+  position: fixed;
+  top: 90px;
+  left: 1350px;
+  animation: twinkle 10s infinite;
+}
 
 
 /*----- Animations -----*/
@@ -103,12 +166,11 @@ section::before {
     0%, 100% {
       opacity: 1;
       transform: scale(1);
-      background-color:  rgb(245, 196, 0); 
     }
     50% {
       opacity: 1;
-      transform: scale(1.5);
-      background-color:  rgb(255, 223, 39);
+      transform: scale(1.5) rotate(180deg);
+  
     }
   }
   
