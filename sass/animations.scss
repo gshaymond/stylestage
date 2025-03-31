@@ -23,13 +23,9 @@ nav::after {
     z-index: -2;
     animation: infinite 5s rotate;
 }
-<<<<<<< HEAD
-section::before {
-
-}
 
 /* Extra large screens (1440px and above) */
-@media (max-width: 2560px) {
+@media (min-width: 2560px) {
   nav::before {
       width: 110px;
       top: 31.5%;
@@ -95,8 +91,9 @@ section::before {
       bottom: 22.5%;
       left: 19%;
   }
-=======
-// start-shape
+}
+
+  // start-shape
 header::before {
   content: "★";  
   position: fixed;
@@ -117,7 +114,6 @@ header::after {
   left: 100px;
   animation: twinkle 10s infinite;
   z-index: 2;
->>>>>>> cf14773c4e6494a3fb43705a122c22760de5b6fd
 }
 
 header .container::before {
