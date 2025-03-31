@@ -200,6 +200,12 @@ body {
   background-attachment: fixed;
 }
 
+@media (width < 1900px) {
+  body {
+    background-repeat: repeat-x;
+    background-size: cover;
+  }
+}
 :root {
   --mono: "MONO" 0.4;
   --casl: "CASL" 0;
@@ -435,7 +441,7 @@ nav::before {
   border-right: 10px solid transparent;
   height: 0;
   width: 125px;
-  top: 28%;
+  top: 29.5%;
   z-index: -1;
   animation: infinite 7s minecart;
 }
@@ -453,6 +459,75 @@ nav::after {
   animation: infinite 5s rotate;
 }
 
+/* Extra large screens (1440px and above) */
+@media (max-width: 2560px) {
+  nav::before {
+    width: 110px;
+    top: 31.5%;
+  }
+
+  nav::after {
+    width: 90px;
+    height: 100px;
+    bottom: 23%;
+  }
+}
+/* Large screens (1024px - 1439px) */
+@media (max-width: 1440px) {
+  nav::before {
+    width: 110px;
+    top: 29.25%;
+  }
+
+  nav::after {
+    width: 70px;
+    height: 80px;
+    bottom: 23%;
+  }
+}
+/* Medium screens (768px - 1023px) */
+@media (max-width: 1024px) {
+  nav::before {
+    width: 110px;
+    top: 29.1%;
+  }
+
+  nav::after {
+    width: 60px;
+    height: 70px;
+    bottom: 23%;
+    left: 10%;
+  }
+}
+/* Small screens (480px - 767px) */
+@media (max-width: 768px) {
+  nav::before {
+    width: 110px;
+    top: 29.1%;
+  }
+
+  nav::after {
+    width: 50px;
+    height: 60px;
+    bottom: 23%;
+    left: 11%;
+  }
+}
+/* Extra small screens (below 480px) */
+@media (max-width: 479px) {
+  nav::before {
+    width: 110px;
+    height: 50px;
+    top: 29.1%;
+  }
+
+  nav::after {
+    width: 45px;
+    height: 50px;
+    bottom: 22.5%;
+    left: 19%;
+  }
+}
 /*----- Animations -----*/
 @keyframes twinkle {
   0%, 100% {

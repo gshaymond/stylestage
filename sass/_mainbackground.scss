@@ -3,3 +3,9 @@ body{
     background-attachment: fixed;
 }
 
+@media (width < 1900px){
+  body {
+    background-repeat: repeat-x;
+    background-size: cover; 
+  }
+}
