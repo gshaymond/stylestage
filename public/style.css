@@ -442,7 +442,7 @@ h3 {
 nav::before {
   content: "";
   position: fixed;
-  border-top: 50px solid #3f2f1e;
+  border-top: 50px solid #90917c;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   height: 0;
@@ -455,7 +455,7 @@ nav::before {
 nav::after {
   content: "";
   position: fixed;
-  background-color: #2c3f2b;
+  background-color: #90917c;
   height: 85px;
   width: 75px;
   bottom: 23%;
@@ -463,6 +463,30 @@ nav::after {
   border-radius: 0 0 17px 17px;
   z-index: -2;
   animation: infinite 5s rotate;
+}
+
+#about:first-child::before {
+  content: "";
+  position: fixed;
+  background-color: #90917c;
+  height: 25px;
+  width: 45px;
+  right: 7%;
+  bottom: 12%;
+  animation: hammer 5s infinite;
+  transform-origin: 50% 300%;
+}
+
+#about:first-child::after {
+  content: "";
+  position: fixed;
+  background-color: #90917c;
+  height: 55px;
+  width: 15px;
+  right: 8%;
+  bottom: 5%;
+  animation: hammer 5s infinite;
+  transform-origin: 50% 100%;
 }
 
 /* Extra large screens (1440px and above) */
