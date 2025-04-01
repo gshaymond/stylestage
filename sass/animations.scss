@@ -2,7 +2,7 @@
 nav::before {
     content: "";
     position: fixed;
-    border-top: 50px solid #ff0000;
+    border-top: 50px solid #3f2f1e;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     height: 0;
@@ -14,7 +14,7 @@ nav::before {
 nav::after {
     content: "";
     position: fixed;
-    background-color: #ff0000;
+    background-color: #2c3f2b;
     height: 85px;
     width: 75px;
     bottom: 23%;
@@ -22,6 +22,8 @@ nav::after {
     border-radius: 0 0 17px 17px;
     z-index: -2;
     animation: infinite 5s rotate;
+    // animation: infinite 3s hammer;
+    // transform-origin: 50% 100%;
 }
 
 /* Extra large screens (1440px and above) */
@@ -38,15 +40,15 @@ nav::after {
 }
 
 /* Large screens (1024px - 1439px) */
-@media (max-width: 1440px) {
+@media (min-width: 1440px) {
   nav::before {
       width: 110px;
-      top: 29.25%;
+      top: 37.3%;
   }
   nav::after {
       width: 70px;
       height: 80px;
-      bottom: 23%;
+      bottom: 3%;
   }
 }
 
@@ -190,3 +192,12 @@ header .container span::after {
       transform: translateX(75vw);
     }
   }
+
+  @keyframes hammer {
+    0%, 55% {
+      transform: rotate(0deg);
+    }
+    5% {
+      transform: rotate(-75deg);
+    }
+}
