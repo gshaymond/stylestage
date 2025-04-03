@@ -74,8 +74,8 @@ nav::after {
   z-index: -2;
 }
 
-/* Extra large screens (1440px and above) */
-@media (min-width: 2560px) {
+/* Extra large screens (2400px and above) */
+@media (min-width: 2400px) {
   nav::before {
     width: 110px;
     top: 31.5%;
@@ -86,9 +86,20 @@ nav::after {
     height: 100px;
     bottom: 23%;
   }
+
+  #guidelines::after {
+    content: "";
+    position: fixed;
+    background-color: #6b4d4d;
+    height: 25px;
+    width: 50px;
+    left: 12%;
+    bottom: 8%;
+    z-index: -2;
+  }
 }
 /* Large screens (1024px - 1439px) */
-@media (min-width: 1440px) {
+@media (max-width: 1440px) {
   nav::before {
     width: 110px;
     top: 37.3%;
@@ -98,6 +109,17 @@ nav::after {
     width: 70px;
     height: 80px;
     bottom: 3%;
+  }
+
+  #guidelines::after {
+    content: "";
+    position: fixed;
+    background-color: #6b4d4d;
+    height: 25px;
+    width: 50px;
+    left: 12%;
+    bottom: 0.8%;
+    z-index: -2;
   }
 }
 /* Medium screens (768px - 1023px) */
@@ -113,6 +135,17 @@ nav::after {
     bottom: 23%;
     left: 10%;
   }
+
+  #guidelines::after {
+    content: "";
+    position: fixed;
+    background-color: #6b4d4d;
+    height: 25px;
+    width: 50px;
+    left: 12%;
+    bottom: 0.8%;
+    z-index: -2;
+  }
 }
 /* Small screens (480px - 767px) */
 @media (max-width: 768px) {
@@ -126,6 +159,17 @@ nav::after {
     height: 60px;
     bottom: 23%;
     left: 11%;
+  }
+
+  #guidelines::after {
+    content: "";
+    position: fixed;
+    background-color: #6b4d4d;
+    height: 25px;
+    width: 50px;
+    left: 12%;
+    bottom: 0.8%;
+    z-index: -2;
   }
 }
 /* Extra small screens (below 480px) */
@@ -141,6 +185,17 @@ nav::after {
     height: 50px;
     bottom: 22.5%;
     left: 19%;
+  }
+
+  #guidelines::after {
+    content: "";
+    position: fixed;
+    background-color: #6b4d4d;
+    height: 25px;
+    width: 50px;
+    left: 12%;
+    bottom: 0.8%;
+    z-index: -2;
   }
 }
 header::before {
