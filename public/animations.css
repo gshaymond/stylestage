@@ -55,7 +55,7 @@ nav::after {
 #guidelines::before {
   content: "";
   position: fixed;
-  background-color: #6b4d4d;
+  background-color: #adadad;
   height: 23px;
   width: 50px;
   right: 11%;
@@ -66,7 +66,7 @@ nav::after {
 #guidelines::after {
   content: "";
   position: fixed;
-  background-color: #6b4d4d;
+  background-color: #adadad;
   height: 25px;
   width: 50px;
   left: 12%;
@@ -90,12 +90,21 @@ nav::after {
   #guidelines::after {
     content: "";
     position: fixed;
-    background-color: #6b4d4d;
     height: 25px;
     width: 50px;
     left: 12%;
     bottom: 8%;
     z-index: -2;
+  }
+
+  #about:first-child::before {
+    right: 8%;
+    bottom: 8%;
+  }
+
+  #about:first-child::after {
+    right: 8.5%;
+    bottom: 4.5%;
   }
 }
 /* Large screens (1024px - 1439px) */
@@ -114,12 +123,19 @@ nav::after {
   #guidelines::after {
     content: "";
     position: fixed;
-    background-color: #6b4d4d;
     height: 25px;
     width: 50px;
     left: 12%;
     bottom: 0.8%;
     z-index: -2;
+  }
+
+  #about:first-child::before {
+    right: 4%;
+  }
+
+  #about:first-child::after {
+    right: 5.5%;
   }
 }
 /* Medium screens (768px - 1023px) */
@@ -206,7 +222,7 @@ header::before {
   top: 80px;
   left: 50px;
   animation: twinkle 10s infinite;
-  z-index: 2;
+  z-index: -1;
 }
 
 header::after {
@@ -217,7 +233,7 @@ header::after {
   top: 180px;
   left: 100px;
   animation: twinkle 10s infinite;
-  z-index: 2;
+  z-index: -1;
 }
 
 header .container::before {
@@ -228,7 +244,7 @@ header .container::before {
   top: 140px;
   left: 180px;
   animation: twinkle 10s infinite;
-  z-index: 2;
+  z-index: -1;
 }
 
 header .container::after {
@@ -239,7 +255,7 @@ header .container::after {
   top: 200px;
   right: 100px;
   animation: twinkle 10s infinite;
-  z-index: 2;
+  z-index: -1;
 }
 
 header .container span::before {
@@ -250,6 +266,7 @@ header .container span::before {
   top: 140px;
   left: 1270px;
   animation: twinkle 10s infinite;
+  z-index: -1;
 }
 
 header .container span::after {
@@ -260,6 +277,7 @@ header .container span::after {
   top: 90px;
   left: 1350px;
   animation: twinkle 10s infinite;
+  z-index: -1;
 }
 
 /*----- Animations -----*/
