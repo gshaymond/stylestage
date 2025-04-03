@@ -442,7 +442,7 @@ h3 {
 nav::before {
   content: "";
   position: fixed;
-  border-top: 50px solid #b4a538;
+  border-top: 50px solid #856024;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   height: 0;
@@ -455,7 +455,7 @@ nav::before {
 nav::after {
   content: "";
   position: fixed;
-  background-color: #b4a538;
+  background-color: #856024;
   height: 85px;
   width: 75px;
   bottom: 23%;
@@ -468,25 +468,25 @@ nav::after {
 #about:first-child::before {
   content: "";
   position: fixed;
-  background-color: #b4a538;
+  background-color: #987844;
   height: 25px;
   width: 45px;
   right: 7%;
-  bottom: 12%;
-  animation: hammer 5s infinite;
-  transform-origin: 50% 300%;
-  z-index: -2;
+  bottom: 12.7%;
+  animation: hammer 3s infinite;
+  transform-origin: 50% 320%;
+  z-index: -1;
 }
 
 #about:first-child::after {
   content: "";
   position: fixed;
-  background-color: #b4a538;
-  height: 55px;
+  background-color: #856024;
+  height: 85px;
   width: 15px;
   right: 8%;
   bottom: 5%;
-  animation: hammer 5s infinite;
+  animation: hammer 3s infinite;
   transform-origin: 50% 100%;
   z-index: -2;
 }
@@ -495,10 +495,21 @@ nav::after {
   content: "";
   position: fixed;
   background-color: #6b4d4d;
-  height: 30px;
-  width: 30px;
-  right: 12%;
-  bottom: 0%;
+  height: 23px;
+  width: 50px;
+  right: 11%;
+  bottom: 0.8%;
+  z-index: -2;
+}
+
+#guidelines::after {
+  content: "";
+  position: fixed;
+  background-color: #6b4d4d;
+  height: 25px;
+  width: 50px;
+  left: 12%;
+  bottom: 0.8%;
   z-index: -2;
 }
 
