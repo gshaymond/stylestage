@@ -74,8 +74,8 @@ nav::after {
   z-index: -2;
 }
 
-/* Extra large screens (1440px and above) */
-@media (min-width: 2560px) {
+/* Extra large screens (2400px and above) */
+@media (min-width: 2400px) {
   nav::before {
     width: 110px;
     top: 31.5%;
@@ -93,6 +93,17 @@ nav::after {
     width: 115px;
     left: 12.5%;
     bottom: 21.5%;
+  }
+
+  #guidelines::after {
+    content: "";
+    position: fixed;
+    background-color: #6b4d4d;
+    height: 25px;
+    width: 50px;
+    left: 12%;
+    bottom: 8%;
+    z-index: -2;
   }
 }
 /* Large screens (1024px - 1439px) */
@@ -114,6 +125,17 @@ nav::after {
     left: 12.5%;
     bottom: 15.2%;
   }
+
+  #guidelines::after {
+    content: "";
+    position: fixed;
+    background-color: #6b4d4d;
+    height: 25px;
+    width: 50px;
+    left: 12%;
+    bottom: 0.8%;
+    z-index: -2;
+  }
 }
 /* Medium screens (768px - 1023px) */
 @media (max-width: 1024px) {
@@ -130,10 +152,21 @@ nav::after {
   }
 
   #guidelines::after {
+<<<<<<< HEAD
     height: 14px;
     width: 45px;
     left: 30%;
     bottom: 21.5%;
+=======
+    content: "";
+    position: fixed;
+    background-color: #6b4d4d;
+    height: 25px;
+    width: 50px;
+    left: 12%;
+    bottom: 0.8%;
+    z-index: -2;
+>>>>>>> main
   }
 }
 /* Small screens (480px - 767px) */
@@ -148,6 +181,17 @@ nav::after {
     height: 60px;
     bottom: 23%;
     left: 11%;
+  }
+
+  #guidelines::after {
+    content: "";
+    position: fixed;
+    background-color: #6b4d4d;
+    height: 25px;
+    width: 50px;
+    left: 12%;
+    bottom: 0.8%;
+    z-index: -2;
   }
 }
 /* Extra small screens (below 480px) */
@@ -166,10 +210,21 @@ nav::after {
   }
 
   #guidelines::after {
+<<<<<<< HEAD
     height: 14px;
     width: 45px;
     left: 35%;
     bottom: 21.5%;
+=======
+    content: "";
+    position: fixed;
+    background-color: #6b4d4d;
+    height: 25px;
+    width: 50px;
+    left: 12%;
+    bottom: 0.8%;
+    z-index: -2;
+>>>>>>> main
   }
 }
 header::before {
